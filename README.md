@@ -17,6 +17,11 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    * rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
    * 教程图片看不到请科学上网
    
+* 步骤大纲：
+   * 微软方面的准备工作
+   * GIHTHUB方面的准备工作
+   * 调用
+   
 #### 微软方面的准备工作 ####
 
 * **第一步，注册应用，获取应用id、secret**
