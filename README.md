@@ -15,7 +15,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 * 准备工具：
    * E5开发者账号（非个人/私人账号）
    * rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
-
+   * 教程图片看不到请点击这里[README_CN](https://github.com/wangziyingwen/AutoApiP/blob/master/README_CN.md)
+   
 * **第一步，注册应用，获取应用id、secret**
 
     * 1）点击打开[仪表板](https://aad.portal.azure.com/)，左边点击**所有服务**，找到**应用注册**，点击+**新注册**
@@ -45,6 +46,10 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
                 
                 Tasks.ReadWrite、User.ReadWrite.All
     
+    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp5.png)
+    
+    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp6.png)
+     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp8.png)
     
     * 5）添加完自动跳回到权限首页，点击**代表授予管理员同意**
