@@ -17,6 +17,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    * rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
    * 教程图片看不到请科学上网
    
+* 微软方面的准备工作：
+
 * **第一步，注册应用，获取应用id、secret**
 
     * 1）点击打开[仪表板](https://aad.portal.azure.com/)，左边点击**所有服务**，找到**应用注册**，点击+**新注册**
@@ -66,7 +68,17 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token地方.png)
     
- * **第三步，新建github密钥**
+ ____________________________________________________
+ 
+ * GITHUB方面的准备工作
+
+ * **第一步，fork本项目**
+ 
+     登陆/新建github账号，回到本项目页面，点击右上角fork本项目的代码到你自己的账号，然后你账号下会出现一个一模一样的项目，接下来的操作均在你的这个项目下进行。
+     
+     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/fork.png)
+     
+ * **第二步，新建github密钥**
  
     * 1）进入你的个人设置页面 (右上角头像 Settings，不是仓库里的 Settings)，选择 Developer settings -> Personal access tokens -> Generate new token
 
@@ -77,8 +89,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     * 2）设置名字为 **GH_TOKEN** , 然后勾选repo，点击 Generate token ，最后**复制保存**生成的github密钥（**获得了github密钥**，一旦离开页面下次就看不到了！）
    
    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/repo.png)
-   
- * **第四步，新建secret**
+  
+ * **第三步，新建secret**
  
     * 1）依次点击页面上栏右边的 Setting -> 左栏 Secrets -> 右上 New repository secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
    
@@ -105,7 +117,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
      应用程序密码 (第一步获得)
      ```
      
-* **第五步，调用**
+* **第四步，调用**
    
     * 1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
@@ -114,6 +126,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
      ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
      
     * 2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
+ 
+* **完**
 
 ## 额外设置 （看不懂请忽略）##
    * **定时启动修改**
