@@ -34,7 +34,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS、AutoApiP
   
                 Calendars.ReadWrite、Contacts.ReadWrite、Directory.ReadWrite.All、
                 
-                Files.ReadWrite.All、MailboxSettings.Read、Mail.ReadWrite、
+                Files.ReadWrite.All、MailboxSettings.ReadWrite、Mail.ReadWrite、
                 
                 Notes.ReadWrite.All、People.Read.All、Sites.ReadWrite.All、
                 
