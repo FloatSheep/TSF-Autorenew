@@ -9,7 +9,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS、AutoApiP
 
    · E5开发者账号（非个人/私人账号）
    
-   · rclone软件，[下载地址rclone.org](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip),(windows 64）
+   · rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
 
 * **第一步，注册应用，获取应用id、secret**
 
@@ -63,73 +63,75 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS、AutoApiP
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/Settings.png)
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token.png)
     
-   2）设置名字为 **GH_TOKEN** （图片以前的，不要跟着起） , 然后**全选了吧**（我懒得看需要啥权限了ORZ），点击 Generate token ，最后**复制保存**生成的github密钥（**获得了github密钥**，一旦离开页面下次就看不到了！）
+   2）设置名字为 **GH_TOKEN** （图片以前的，不要跟着起） , 然后把第一个repo全点了，点击 Generate token ，最后**复制保存**生成的github密钥（**获得了github密钥**，一旦离开页面下次就看不到了！）
    
-   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/repo.png)
+   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/repo.png)
    
  * **第四步，新建secret**
  
-   1)依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新建4个secret：**GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET** 
+   1)依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
    
-   **(以下内容注意前后不要有空格空行)**
+    **(以下内容注意前后不要有空格空行)**
  
-  GH_TOKEN
-  ```shell
-  github密钥(第三步)
-  ```
-  MS_TOKEN
-  ```shell
-  微软密钥（第二步refresh_token）
-  ```
-  CLIENT_ID
-  ```shell
-  应用程序ID(第一步)
-  ```
-  CLIENT_SECRET
-  ```shell
-  应用程序密码(第一步)
-  ```
+     GH_TOKEN
+     ```shell
+     github密钥(第三步)
+     ```
+     MS_TOKEN
+     ```shell
+     微软密钥（第二步refresh_token）
+     ```
+     CLIENT_ID
+     ```shell
+     应用程序ID(第一步)
+     ```
+     CLIENT_SECRET
+     ```shell
+     应用程序密码(第一步)
+     ```
 * **第五步，调用**
    
-   点击右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
+    1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
-   （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认1api调用成功了，就像图里的一样）
+    （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认1api调用成功了，就像图里的一样）
    
-   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
+     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
+     
+    2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传的secret是正确的）
 
 ## 额外设置 ##
 
 * **多账号/应用支持**
 
-  如果想输入第二账号或者应用，请按上述获取**第二个应用的id、密码、微软密钥：**
+   如果想输入第二账号或者应用，请按上述获取**第二个应用的id、密码、微软密钥：**
  
-  步骤
+   步骤
  
-  1)增加secret
+   1)增加secret
  
-  依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新增加secret：APP_NUM、MS_TOKEN_2、CLIENT_ID_2、CLIENT_SECRET_2
+   依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新增加secret：APP_NUM、MS_TOKEN_2、CLIENT_ID_2、CLIENT_SECRET_2
  
-  APP_NUM
-  ```shell
-  账号/应用数量(现在例如是2，3个就是3，日后如果要增加请删掉新建APP_NUM)
-  ```
-  MS_TOKEN_2
-  ```shell
-  第二个账号的微软密钥（第二步refresh_token），（第三个就是MS_TOKEN_3，如此类推）
-  ```
-  CLIENT_ID_2
-  ```shell
-  第二个账号的应用程序ID(第一步)
-  ```
-  CLIENT_SECRET_2
-  ```shell
-  第二个账号的应用程序密码(第一步)
-  ```
+   APP_NUM
+   ```shell
+   账号/应用数量(现在例如是2，3个就是3，日后如果要增加请删掉新建APP_NUM)
+   ```
+   MS_TOKEN_2
+   ```shell
+   第二个账号的微软密钥（第二步refresh_token），（第三个就是MS_TOKEN_3，如此类推）
+   ```
+   CLIENT_ID_2
+   ```shell
+   第二个账号的应用程序ID(第一步)
+   ```
+   CLIENT_SECRET_2
+   ```shell
+   第二个账号的应用程序密码(第一步)
+   ```
    2)修改.github/workflows/里的两个yml文件（**超过5个账号需要更改，5个及以下暂时不用修改文件，忽略这一步**）
   
    yml文件我已经注明了，看着改就行，我已经写入5个账号了，跟着复制粘贴很简单的（没有找到比较好的自动方案）
   
  * **超级参数设置** （待补充）
  
-   各个api之间的随机延时、账号间的随机延时、每一轮间的随机延时等
+    各个api之间的随机延时、账号间的随机延时、每一轮间的随机延时等
  
