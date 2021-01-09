@@ -17,7 +17,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    * rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
    * 教程图片看不到请科学上网
    
-### 微软方面的准备工作 ###
+#### 微软方面的准备工作 ####
 
 * **第一步，注册应用，获取应用id、secret**
 
@@ -70,7 +70,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
  ____________________________________________________
  
- ### GITHUB方面的准备工作 ###
+ #### GITHUB方面的准备工作 ####
 
  * **第一步，fork本项目**
  
@@ -116,8 +116,9 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
      ```shell
      应用程序密码 (第一步获得)
      ```
-     
-### 调用 ###
+________________________________________________
+
+#### 调用 ####
    
    * 1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
@@ -128,6 +129,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    * 2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
  
 ### 教程完 ###
+
+__________________________________________________________________________
 
 ## 额外设置 （看不懂请忽略）##
    * **定时启动修改**
