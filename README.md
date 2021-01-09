@@ -48,13 +48,13 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp8.png)
     
-    5）回到权限首页，点击**代表授予管理员同意**
+    5）添加完自动跳回到权限首页，点击**代表授予管理员同意**
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp7.png)
     
 * **第二步，获取refresh_token(微软密钥)**
 
-    1）rclone所在文件夹，shift+右键，在此处打开powershell，输入下面修改后的内容，回车后跳出浏览器，登入e5账号，点击接受，回到powershell窗口，看到一串东西。
+    1）rclone.exe所在文件夹，shift+右键，在此处打开powershell，输入下面**修改后**的内容，回车后跳出浏览器，登入e5账号，点击接受，回到powershell窗口，看到一串东西。
            
                 ./rclone authorize "onedrive" "应用程序(客户端)ID" "应用程序密码"
                
@@ -103,7 +103,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    
     1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
-    （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认1api调用成功了，就像图里的一样）
+    （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
    
      ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
      
@@ -184,7 +184,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
 —————————————完—————————————
 
-        wangziyingwen
+                             wangziyingwen
         
 —————————————完—————————————
 
