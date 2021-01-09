@@ -13,10 +13,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 
 ## 步骤 ##
 * 准备工具：
-
-   · E5开发者账号（非个人/私人账号）
-   
-   · rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
+   * E5开发者账号（非个人/私人账号）
+   * rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
 
 * **第一步，注册应用，获取应用id、secret**
 
