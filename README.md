@@ -8,8 +8,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 ### 跳转
 * AutoApiSecret：https://github.com/wangziyingwen/AutoApiSecret
 * **常见错误及解决办法/更新日志**：https://github.com/wangziyingwen/Autoapi-test
-* 视频教程：（待补充）
-   * B站：
+* 视频教程：（审核中）
+   * B站：https://www.bilibili.com/video/BV185411n7Mq/
 
 ## 步骤 ##
 * 准备工具：
