@@ -22,7 +22,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
      ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp.png)
     
-    * 2)填入名字，受支持账户类型前三任选，重定向填入 http://localhost:53682/ ，点击**注册**
+    * 2）填入名字，受支持账户类型前三任选，重定向填入 http://localhost:53682/ ，点击**注册**
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp2.png)
     
@@ -53,29 +53,29 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
 * **第二步，获取refresh_token(微软密钥)**
 
-    1）rclone.exe所在文件夹，shift+右键，在此处打开powershell，输入下面**修改后**的内容，回车后跳出浏览器，登入e5账号，点击接受，回到powershell窗口，看到一串东西。
+    * 1）rclone.exe所在文件夹，shift+右键，在此处打开powershell，输入下面**修改后**的内容，回车后跳出浏览器，登入e5账号，点击接受，回到powershell窗口，看到一串东西。
            
                 ./rclone authorize "onedrive" "应用程序(客户端)ID" "应用程序密码"
                
-    2）在那一串东西里找到 "refresh_token"：" ，从双引号开始选中到 ","expiry":2021 为止（就是refresh_token后面双引号里那一串，不要双引号），如下图，右键复制保存（**获得了微软密钥**）
+    * 2）在那一串东西里找到 "refresh_token"：" ，从双引号开始选中到 ","expiry":2021 为止（就是refresh_token后面双引号里那一串，不要双引号），如下图，右键复制保存（**获得了微软密钥**）
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token地方.png)
     
  * **第三步，新建github密钥**
  
-    1）进入你的个人设置页面 (右上角头像 Settings，不是仓库里的 Settings)，选择 Developer settings -> Personal access tokens -> Generate new token
+    * 1）进入你的个人设置页面 (右上角头像 Settings，不是仓库里的 Settings)，选择 Developer settings -> Personal access tokens -> Generate new token
 
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/Settings.png)
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token.png)
     
-   2）设置名字为 **GH_TOKEN** , 然后勾选repo，点击 Generate token ，最后**复制保存**生成的github密钥（**获得了github密钥**，一旦离开页面下次就看不到了！）
+    * 2）设置名字为 **GH_TOKEN** , 然后勾选repo，点击 Generate token ，最后**复制保存**生成的github密钥（**获得了github密钥**，一旦离开页面下次就看不到了！）
    
    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/repo.png)
    
  * **第四步，新建secret**
  
-   1)依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
+    * 1)依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
    
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/setting.png)
     
@@ -100,13 +100,13 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
      
 * **第五步，调用**
    
-    1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
+    * 1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
     （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
    
      ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
      
-    2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
+    * 2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
 
 ## 额外设置 （看不懂请忽略）##
    * **定时启动修改**
