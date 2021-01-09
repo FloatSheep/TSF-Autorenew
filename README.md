@@ -75,9 +75,11 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    
  * **第四步，新建secret**
  
-    * 1）依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
+    * 1）依次点击页面上栏右边的 Setting -> 左栏 Secrets -> 右上 New repository secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
    
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/setting.png)
+    
+    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/secret2.png)
     
      **(以下填入内容注意前后不要有空格空行)**
  
@@ -131,7 +133,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
  
    1)增加secret
  
-   依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新增加secret：APP_NUM、MS_TOKEN_2、CLIENT_ID_2、CLIENT_SECRET_2
+   依次点击页面上栏右边的 Setting -> 左栏 Secrets -> 右上 New repository secret，新增加secret：APP_NUM、MS_TOKEN_2、CLIENT_ID_2、CLIENT_SECRET_2
  
    APP_NUM
    ```shell
