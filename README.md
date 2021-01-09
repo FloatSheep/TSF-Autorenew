@@ -18,21 +18,21 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 
 * **第一步，注册应用，获取应用id、secret**
 
-    1）点击打开[仪表板](https://aad.portal.azure.com/)，左边点击**所有服务**，找到**应用注册**，点击+**新注册**
+    * 1）点击打开[仪表板](https://aad.portal.azure.com/)，左边点击**所有服务**，找到**应用注册**，点击+**新注册**
     
-    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp.png)
+     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp.png)
     
-    2)填入名字，受支持账户类型前三任选，重定向填入 http://localhost:53682/ ，点击**注册**
+    * 2)填入名字，受支持账户类型前三任选，重定向填入 http://localhost:53682/ ，点击**注册**
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp2.png)
     
-    3）复制应用程序（客户端）ID到记事本备用(**获得了应用程序ID**！)，点击左边管理的**证书和密码**，点击+**新客户端密码**，点击添加，复制新客户端密码的**值**保存（**获得了应用程序密码**！）
+    * 3）复制应用程序（客户端）ID到记事本备用(**获得了应用程序ID**！)，点击左边管理的**证书和密码**，点击+**新客户端密码**，点击添加，复制新客户端密码的**值**保存（**获得了应用程序密码**！）
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp3.png)
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp4.png)
     
-    4）点击左边管理的**API权限**，点击+**添加权限**，点击常用Microsoft API里的**Microsoft Graph**(就是那个蓝色水晶)，
+    * 4）点击左边管理的**API权限**，点击+**添加权限**，点击常用Microsoft API里的**Microsoft Graph**(就是那个蓝色水晶)，
     点击**委托的权限**，然后在下面的条例选中下列需要的权限，最后点击底部**添加权限**
     
     **赋予api权限的时候，选择以下几个**
@@ -47,7 +47,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp8.png)
     
-    5）添加完自动跳回到权限首页，点击**代表授予管理员同意**
+    * 5）添加完自动跳回到权限首页，点击**代表授予管理员同意**
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp7.png)
     
