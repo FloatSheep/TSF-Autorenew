@@ -21,10 +21,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Install requests and nacl #安装requests和nacl模块
+    - name: Install requests and nacl #安装requests模块
       run: |
         pip install requests
-        pip install PyNaCl
     - name: run api #api调用
       env: 
         #github的账号信息
