@@ -110,10 +110,19 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
 
 ## 额外设置 （看不懂请忽略）##
+   * **定时启动修改**
 
    * **多账号/应用支持**
     
    * **超级参数设置**
+
+#### 定时启动修改 ####
+   
+   我设定的每6小时自动运行一次，每次调用3轮（点击右上角星星/star也可以立马调用一次），你们自行斟酌修改（我也不知道保持活跃要调用多少次、多久）：
+
+  * 定时自动启动修改地方：在.github/workflow/autoapi.yml(只修改这一个)文件里，自行百度cron定时任务格式，最短每5分钟一次
+   
+    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/定时.png)
     
 #### 多账号/应用支持 ####
 
@@ -171,10 +180,12 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
             这个是每个账号/应用之间要不要开启延时。后面两参数参考“随机时间”
     
    （延时的设置是会延长运行时间的，全关闭大概每次运行1min，开启就会适当延长）
+ 
     
-    
-————————————————————————————
+—————————————完—————————————
 
         wangziyingwen
         
-____________________________
+—————————————完—————————————
+
+
