@@ -18,9 +18,9 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
    * 教程图片看不到请科学上网
    
 * 步骤大纲：
-   * 微软方面的准备工作
-   * GIHTHUB方面的准备工作
-   * 调用
+   * 微软方面的准备工作 （获取应用id、密码、密钥）
+   * GIHTHUB方面的准备工作  （获取Github密钥、设置secret）
+   * 调用api
    
 #### 微软方面的准备工作 ####
 
@@ -123,7 +123,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
      ```
 ________________________________________________
 
-#### 调用 ####
+#### 调用API ####
    
    * 1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
