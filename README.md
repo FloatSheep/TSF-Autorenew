@@ -67,6 +67,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     1）进入你的个人设置页面 (右上角头像 Settings，不是仓库里的 Settings)，选择 Developer settings -> Personal access tokens -> Generate new token
 
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/Settings.png)
+    
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token.png)
     
    2）设置名字为 **GH_TOKEN** , 然后勾选repo，点击 Generate token ，最后**复制保存**生成的github密钥（**获得了github密钥**，一旦离开页面下次就看不到了！）
@@ -77,25 +78,27 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
  
    1)依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新建4个secret： **GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET**  
    
-    **(以下内容注意前后不要有空格空行)**
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/setting.png)
+    
+     **(以下填入内容注意前后不要有空格空行)**
  
      GH_TOKEN
      ```shell
-     github密钥(第三步)
+     github密钥 (第三步获得)，例如获得的密钥是abc...xyz，则在secret页面直接粘贴进去，不用做任何修改，只需保证前后没有空格空行
      ```
      MS_TOKEN
      ```shell
-     微软密钥（第二步refresh_token）
+     微软密钥（第二步获得的refresh_token）
      ```
      CLIENT_ID
      ```shell
-     应用程序ID(第一步)
+     应用程序ID (第一步获得)
      ```
      CLIENT_SECRET
      ```shell
-     应用程序密码(第一步)
+     应用程序密码 (第一步获得)
      ```
+     
 * **第五步，调用**
    
     1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
@@ -108,63 +111,69 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 
 ## 额外设置 （看不懂请忽略）##
 
-    * **多账号/应用支持**
+   * **多账号/应用支持**
     
-    * **超级参数设置**
+   * **超级参数设置**
     
 #### 多账号/应用支持 ####
 
-    如果想输入第二账号或者应用，请按上述获取**第二个应用的id、密码、微软密钥：**
+   如果想输入第二账号或者应用，请按上述获取**第二个应用的id、密码、微软密钥：**
  
-    再按以下步骤：
+   再按以下步骤：
  
-    1)增加secret
+   1)增加secret
  
-    依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新增加secret：APP_NUM、MS_TOKEN_2、CLIENT_ID_2、CLIENT_SECRET_2
+   依次点击页面上栏右边的 Setting -> Secrets -> Add a new secret，新增加secret：APP_NUM、MS_TOKEN_2、CLIENT_ID_2、CLIENT_SECRET_2
  
-    APP_NUM
-    ```shell
-    账号/应用数量(现在例如是2，3个就是3，日后如果要增加请删掉新建APP_NUM)
-    ```
-    MS_TOKEN_2
-    ```shell
-    第二个账号的微软密钥（第二步refresh_token），（第三个就是MS_TOKEN_3，如此类推）
-    ```
-    CLIENT_ID_2
-    ```shell
-    第二个账号的应用程序ID(第一步)
+   APP_NUM
+   ```shell
+   账号/应用数量(现在例如是2，3个就是3，日后如果要增加请删掉新建APP_NUM)
    ```
-    CLIENT_SECRET_2
-    ```shell
-    第二个账号的应用程序密码(第一步)
+   MS_TOKEN_2
+   ```shell
+   第二个账号的微软密钥（第二步refresh_token），（第三个就是MS_TOKEN_3，如此类推）
    ```
-    2)修改.github/workflows/里的两个yml文件（**超过5个账号需要更改，5个及以下暂时不用修改文件，忽略这一步**）
+   CLIENT_ID_2
+   ```shell
+   第二个账号的应用程序ID(第一步)
+   ```
+   CLIENT_SECRET_2
+   ```shell
+   第二个账号的应用程序密码(第一步)
+   ```
+   
+   2)修改.github/workflows/里的两个yml文件（**超过5个账号需要更改，5个及以下暂时不用修改文件，忽略这一步**）
     
-    yml文件我已经注明了，看着改就行，我已经写入5个账号了，跟着复制粘贴很简单的（没有找到比较好的自动方案）
+   yml文件我已经注明了，看着改就行，我已经写入5个账号了，跟着复制粘贴很简单的（没有找到比较好的自动方案）
   
 #### 超级参数设置 ####
  
-     runapi.py 文件第11行有个config_list，里面是以下参数配置
+   runapi.py 文件第11行有个config_list，里面是以下参数配置
      
-     ·轮数：
-              就是一次运行要跑多少轮api，也就是启动一次会重复跑几圈
-     
-    · 是否启动随机时间（默认关闭）：
-              这个是每一轮结束，要不要等一个随机时间再开始调用下一轮。后面两个参数就是生成随机时间的，例如设置600，1200，就会延时600-1200s之间。
-      
-    · 是否开启随机api顺序（默认开启）：
-              不开启就是初版10个api，固定顺序。开启就是28个api抽12个随机排序。
-      
-    · 是否开启各api延时（默认关闭）：
-              这个是每个api之间要不要开启延时。后面两参数参考“随机时间”
-      
-    · 是否开启各账号延时（默认关闭）：
-              这个是每个账号/应用之间要不要开启延时。后面两参数参考“随机时间”
+   · 轮数：
               
-    （延时的设置是会延长运行时间的，全关闭大概每次运行1min，开启就会适当延长）
+             就是一次运行要跑多少轮api，也就是启动一次会重复跑几圈
+    
+   · 是否启动随机时间（默认关闭）：
+            
+            这个是每一轮结束，要不要等一个随机时间再开始调用下一轮。后面两个参数就是生成随机时间的，例如设置600，1200，就会延时600-1200s之间。
+    
+   · 是否开启随机api顺序（默认开启）：
+            
+            不开启就是初版10个api，固定顺序。开启就是28个api抽12个随机排序。
+    
+   · 是否开启各api延时（默认关闭）：
+            
+            这个是每个api之间要不要开启延时。后面两参数参考“随机时间”
+    
+   · 是否开启各账号延时（默认关闭）：
+   
+            这个是每个账号/应用之间要不要开启延时。后面两参数参考“随机时间”
+    
+   （延时的设置是会延长运行时间的，全关闭大概每次运行1min，开启就会适当延长）
     
     
-————————
+————————————————————————————
 
         wangziyingwen
         
