@@ -1,7 +1,7 @@
 # AutoApiP
 AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApiP
 
-先暂停，有bug
+# 先暂停，有bug
 
 ## 置顶 ##
 * **不保证续期**
