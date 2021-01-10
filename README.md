@@ -129,7 +129,8 @@ ________________________________________________
 
    （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
    
-    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
+   
+   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
      
    * 2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
  
@@ -150,7 +151,7 @@ __________________________________________________________________________
 
   * 定时自动启动修改地方：在.github/workflow/autoapi.yml(只修改这一个)文件里，自行百度cron定时任务格式，最短每5分钟一次
    
-    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/定时.png)
+   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/定时.png)
     
 #### 多账号/应用支持 ####
 
