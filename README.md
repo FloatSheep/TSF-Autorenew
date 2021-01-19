@@ -8,7 +8,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 ### 相关 ###
 * AutoApiSecret：https://github.com/wangziyingwen/AutoApiSecret
 * **常见错误及解决办法/更新日志**：https://github.com/wangziyingwen/Autoapi-test
-   * P版错误说明已更新进程序
+   * P版错误说明已更新进程序，详细请运行后看action日志报告
 * 视频教程：
    * B站：https://www.bilibili.com/video/BV185411n7Mq/
 
@@ -126,15 +126,26 @@ ________________________________________________
 
 #### 调用API ####
    
-   * 1）点击两次右上角的星星（star）启动action,，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
+   * 1）点击两次右上角的星星（star，就是fork按钮的隔壁）启动action，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
-   （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
+   （必需点进去里面的Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
    
    
    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
      
-   * 2）再点两次星星，如果还能成功运行就ok了（这一步是为了保证重新上传到secret的token是正确的）
+   * 2）再点两次星星，查看是否能再次成功运行
  
+        同时，依次点击页面上栏右边的 Setting -> 左栏 Secrets（也就是Github方面准备的第三步的secret页面），应该能看到MS_TOKEN显示刚刚update了
+        
+        （这一步是为了保证重新上传到secret的token是正确的）
+        
+#### 教程最后 ####
+
+   程序会自行按计划启动，不必操心。
+   
+   但是github更新了防止薅羊毛的规则，如果仓库60天无任何变动，将会暂停Action，但是会发邮件通知，所以请留意邮箱，收到邮件请上来手动启动一下action。
+   （我还没有收到过此邮件，但是据说邮件里会有启动链接，或者上来按两次星星按钮就行）
+   
 ### 教程完 ###
 
 __________________________________________________________________________
