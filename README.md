@@ -1,13 +1,14 @@
-# AutoApiP
+# AutoApiP ———— E5自动续期
 AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApiP
 
-## 置顶 ##
-* **不保证续期**
-* 设置了**周六日(UTC时间)不启动**自动调用,1-5每6小时自动启动一次，修改看教程
+## 说明 ##
+* E5自动续期程序，但是**不保证续期**
+* 设置了**周六日(UTC时间)不启动**自动调用，周1-5每6小时自动启动一次 （修改看教程）
 
-### 跳转
+### 相关 ###
 * AutoApiSecret：https://github.com/wangziyingwen/AutoApiSecret
 * **常见错误及解决办法/更新日志**：https://github.com/wangziyingwen/Autoapi-test
+   * P版错误说明已更新进程序
 * 视频教程：
    * B站：https://www.bilibili.com/video/BV185411n7Mq/
 
@@ -209,12 +210,16 @@ __________________________________________________________________________
             这个是每个账号/应用之间要不要开启延时。后面两参数参考“随机时间”
     
    （延时的设置是会延长运行时间的，全关闭大概每次运行1min，开启就会适当延长）
- 
-    
-—————————————完—————————————
+   
+### 结尾 ###
 
-                             wangziyingwen
-        
-—————————————完—————————————
+有事发issue
+
+Q群：[657581700](https://jq.qq.com/?_wv=1027&k=5FQJbWmV)  （项目相关讨论）
+
+                              wangziyingwen
+    
+
+
 
 
