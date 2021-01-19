@@ -23,6 +23,10 @@ def getpublickey(Auth,geturl):
     headers={'Accept': 'application/vnd.github.v3+json','Authorization': Auth}
     html = req.get(geturl,headers=headers)
     jsontxt = json.loads(html.text)
+    if 'key' in jsontxt:
+        print("公钥获取成功")
+    else:
+        print("公钥获取失败，请检查secret里 GH_TOKEN 格式与设置是否正确")
     public_key = jsontxt['key']
     global key_id 
     key_id = jsontxt['key_id']
@@ -40,6 +44,10 @@ def getmstoken(ms_token):
          }
     html = req.post('https://login.microsoftonline.com/common/oauth2/v2.0/token',data=data,headers=headers)
     jsontxt = json.loads(html.text)
+    if 'refresh_token' in jsontxt:
+        print("微软密钥获取成功")
+    else:
+        print("微软密钥获取失败"+'\n'+"请检查secret里 CLIENT_ID , CLIENT_SECRET , MS_TOKEN 格式与内容是否正确，然后重新设置")
     refresh_token = jsontxt['refresh_token']
     access_token = jsontxt['access_token']
     return refresh_token
