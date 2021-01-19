@@ -128,7 +128,7 @@ ________________________________________________
    
    * 1）点击两次右上角的星星（star，就是fork按钮的隔壁）启动action，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
-   （必需点进去里面的Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
+   （必需点进去build里面的run api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认api调用成功了，就像图里的一样）
    
    
    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
