@@ -45,7 +45,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     * 4）点击左边管理的**API权限**，点击+**添加权限**，点击常用Microsoft API里的**Microsoft Graph**(就是那个蓝色水晶)，
     点击**委托的权限**，然后在下面的条例选中下列需要的权限，最后点击底部**添加权限**
     
-    **赋予api权限的时候，选择以下几个**
+    **赋予api权限的时候，选择以下几个（全选Read也行）**
   
                 Calendars.ReadWrite、Contacts.ReadWrite、Directory.ReadWrite.All、
                 
@@ -146,8 +146,11 @@ ________________________________________________
 
    程序会自行按计划启动，不必操心。
    
-   但是github更新了防止薅羊毛的规则，如果仓库60天无任何变动，将会暂停Action，但是会发邮件通知，所以请留意邮箱，收到邮件请上来手动启动一下action。
-   （我还没有收到过此邮件，但是据说邮件里会有启动链接，或者上来按两次星星按钮就行）
+        但是github更新了防止薅羊毛的规则，如果仓库60天无任何变动，将会暂停Action，但是会发邮件通知，所以请留意邮箱，收到邮件请上来手动启动一下action。
+       （我还没有收到过此邮件，但是据说邮件里会有启动链接，或者上来按两次星星按钮就行）
+   
+   **P版（AutoApiP）用户请留意是否会触发此暂停规则，由于P版采取了新方案，是否能跳过github检测活跃呢？如果P版收到暂停邮件，最好在issues的这个帖子[触发暂停统计](https://github.com/wangziyingwen/AutoApiP/issues/7)里留言**
+   
    
 ### 教程完 ###
 
