@@ -6,22 +6,23 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
 * 设置了**周六日(UTC时间)不启动**自动调用，周1-5每6小时自动启动一次 （修改看教程）
 
 ### 相关 ###
+* AutoApiP：https://github.com/wangziyingwen/AutoApiP
 * AutoApiSecret：https://github.com/wangziyingwen/AutoApiSecret
-* **常见错误及解决办法/更新日志**：https://github.com/wangziyingwen/Autoapi-test
+* **错误及解决办法/续期相关知识/更新日志**：https://github.com/wangziyingwen/Autoapi-test
    * P版错误说明已更新进程序，详细请运行后看action日志报告
 * 视频教程：
    * B站：https://www.bilibili.com/video/BV185411n7Mq/
 
 ## 步骤 ##
 * 准备工具：
-   * E5开发者账号（非个人/私人账号）
+   * E5开发者账号（管理员、子号均可，非个人/私人账号）
    * rclone软件，[下载地址 rclone.org ](https://downloads.rclone.org/v1.53.3/rclone-v1.53.3-windows-amd64.zip)，(windows 64）
    * 教程图片看不到请科学上网
    
 * 步骤大纲：
    * 微软方面的准备工作 （获取应用id、密码、密钥）
    * GIHTHUB方面的准备工作  （获取Github密钥、设置secret）
-   * 调用api
+   * 试运行
    
 #### 微软方面的准备工作 ####
 
@@ -61,6 +62,8 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp8.png)
     
     * 5）添加完自动跳回到权限首页，点击**代表授予管理员同意**
+         
+         如若是**子号**运行，请用管理员账号登录[仪表板](https://aad.portal.azure.com/)找到**子号注册的应用**，点击“代表管理员授权”。 
     
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApiP/creatapp7.png)
     
@@ -124,7 +127,7 @@ AutoApi系列：~~AutoApi~~、AutoApiSecret、~~AutoApiSR、AutoApiS~~、AutoApi
      ```
 ________________________________________________
 
-#### 调用API ####
+#### 试运行 ####
    
    * 1）点击两次右上角的星星（star，就是fork按钮的隔壁）启动action，再点击上面的Action，选择Auto Api Pro 就能看到每次的运行日志，看看运行状况
 
@@ -167,7 +170,7 @@ __________________________________________________________________________
     
 #### 多账号/应用支持 ####
 
-   如果想输入第二账号或者应用，请按上述获取**第二个应用的id、密码、微软密钥：**
+   如果想输入第二账号或者应用，请按上述步骤获取**第二个应用的id、密码、微软密钥：**
  
    再按以下步骤：
  
@@ -177,20 +180,19 @@ __________________________________________________________________________
  
    APP_NUM
    ```shell
-   账号/应用数量(现在例如是2，3个就是3，日后如果要增加请删掉新建APP_NUM)
+   账号/应用数量(现在例如是两个账号/应用，就是2 ；3个账号就填3，日后如果想要增加请修改APP_NUM)
    ```
    MS_TOKEN_2
    ```shell
-   第二个账号的微软密钥（第二步refresh_token），（第三个就是MS_TOKEN_3，如此类推）
+   第二个账号的微软密钥（第二步refresh_token），（第三个账号/应用就是MS_TOKEN_3，如此类推）
    ```
    CLIENT_ID_2
    ```shell
-   第二个账号的应用程序ID(第一步)
+   第二个账号的应用程序ID (第一步获取),（第三个账号/应用就是CLIENT_ID_3，如此类推）
    ```
    CLIENT_SECRET_2
    ```shell
-   第二个账号的应用程序密码(第一步)
-   ```
+   第二个账号的应用程序密码 (第一步获取),（第三个账号/应用就是CLIENT_SECRET_3，如此类推）
    
    2)修改.github/workflows/里的两个yml文件（**超过5个账号需要更改，5个及以下暂时不用修改文件，忽略这一步**）
     
