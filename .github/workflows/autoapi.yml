@@ -60,14 +60,7 @@ jobs:
     - name: Keep running - Generate time.log #打印时间
       run: |
         echo `date +"%Y-%m-%d %H:%M:%S"` >> ./time.log
-    - name: Keep running - Commit
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add .
-        git commit -a -m "[Auto]Keep running"
     - name: Keep running - Push #保活 - 提交
-      uses: ad-m/github-push-action@master
+      uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
