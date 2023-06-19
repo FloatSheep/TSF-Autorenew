@@ -61,7 +61,7 @@ jobs:
       run: |
         echo `date +"%Y-%m-%d %H:%M:%S"` >> ./time.log
     - name: Keep running - Commit #保活 - 提交
-      uses: actions-go/push@master
+      uses: ad-m/github-push-action@master
       with:
-        commit-message: '[Auto] Keep running'
-        remote: origin
+        github_token: ${{ secrets.GH_TOKEN }}
+        branch: ${{ github.ref }}
