@@ -57,3 +57,11 @@ jobs:
         CLIENT_SECRET_n: ${{ secrets.CLIENT_SECRET_n }}
       run: |
         python runapi.py
+    - name: Keep running - Generate time.log #打印时间
+      run: |
+        echo `date +"%Y-%m-%d %H:%M:%S"` >> ./time.log
+    - name: Keep running - Commit #保活 - 提交
+      uses: actions-go/push@master
+      with:
+        commit-message: '[Auto] Keep running'
+        remote: origin
