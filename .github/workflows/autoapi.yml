@@ -56,3 +56,9 @@ jobs:
         CLIENT_SECRET_n: ${{ secrets.CLIENT_SECRET_n }}
       run: |
         python runapi.py
+
+    - name: Delete Workflow Runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        retain_days: 90
+        keep_minimum_runs: 6
