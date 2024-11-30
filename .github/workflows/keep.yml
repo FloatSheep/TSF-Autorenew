@@ -1,0 +1,27 @@
+name: Keep Running
+
+on: 
+  push:
+    tags:
+    - 'v*'
+  #  branches: 
+  #    - master
+  schedule:
+    - cron: '28 1,3,5,7,9,11 * * 1-6'
+  watch:
+    types: [started]
+   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Keep running - Generate time.log #打印时间
+      run: |
+        rm ./time.log
+        echo `date +"%Y-%m-%d %H:%M:%S"` >> ./time.log
+    - name: Keep running - Push #保活 - 提交
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
